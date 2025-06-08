@@ -53,7 +53,7 @@ main {
 main .left,
 main .right {
   height: 100%;
-  flex-basis: 50%;
+  width: 50%;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -107,7 +107,7 @@ main .left {
 
 main .right {
   background-color: #1c1c2b;
-  padding: 1rem 2rem;
+  padding: 0.5rem;
   font-size: 1rem;
   overflow-y: auto;
   line-height: 1.6;
@@ -162,16 +162,25 @@ main .right code {
 /* Responsive styles for tablets and mobile */
 @media (max-width: 768px) {
   main {
+    display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0 0.5rem !important;
+    height: 100vh;
+    margin: 0;
   }
 
   main .left,
   main .right {
-    flex-basis: auto;
-    height: auto;
     width: 100%;
     margin-bottom: 1rem;
+  }
+
+  main .left {
+    height: 35vh;
+  }
+
+  main .right {
+    height: 65vh;
   }
 
   .left .review {
@@ -186,6 +195,6 @@ main .right code {
 @media (max-width: 480px) {
   main .right {
     font-size: 0.9rem;
-    padding: 1rem;
+    padding: 0 !important;
   }
 }
